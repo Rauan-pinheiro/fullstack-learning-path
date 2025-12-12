@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de fundo</title>
+    <style>
+
+        .caixa{
+            width: 700px;
+            height: 300px;
+            border: 3px dotted red;
+            /*
+            background-color: lightgreen;
+            background-image: url('assets/img/fundo-css-escuro.png');
+            */
+           
+            /*
+            repeat: é repetida horizontal e vertical
+            repeat-x: é repetida na horizontal
+            repeat-y: é repetida na vertical
+            no-repeat: imagem é exibida apenas uma vez
+            background-repeat: no-repeat;
+            */
+
+            /*
+            fixed -> a imagem de fundo permanece na mesma posição na página
+            scrool -> a imagem de fundo move-se com o
+            conteúdo quando o usuário rola a página
+            background-attachment: scroll;
+            */
+
+            /*
+            Quando a imagem não é repetida, você pode posicionar a imagem!
+            horizontal: left, center, right
+            vertical: top, center, bottom
+            * Necessário escolher dois valores,
+            senão será utilizado center como segundo valor
+            
+            background-position: center center;
+            background-position-x: left; 
+            background-position-y: center;
+            */
+            /*
+            Todas as propriedades resumidas
+            ordem: cor, imagem, repeat, attachment, position
+            */
+
+            background: 
+                lightgreen
+                url('assets/img/fundo-css-escuro.png') 
+                no-repeat
+                scroll
+                left top;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="caixa">
+
+        <h1>Título do texto</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptatem eos ipsum libero ex modi atque qui quo quis expedita nam nostrum cupiditate ab nesciunt corporis fugit, autem amet ratione!
+        </p>
+
+    </div>
+</body>
+</html>

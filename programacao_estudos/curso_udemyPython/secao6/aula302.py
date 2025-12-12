@@ -1,0 +1,1 @@
+#aula configurando meu gmail para mandar emails com python!

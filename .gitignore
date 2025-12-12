@@ -1,0 +1,22 @@
+# --- GERAL ---
+.DS_Store
+Thumbs.db
+.vscode/
+
+# --- PYTHON / DJANGO ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+db.sqlite3
+.env
+*.env
+
+# --- JAVASCRIPT / NODE / REACT ---
+node_modules/
+npm-debug.log
+yarn-debug.log
+build/
+dist/
+.env.local

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        table, td, th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Tabelas</h1>
+
+    <!--
+    table -> tabela
+    tr -> Table row (linha da tabela)
+    td -> table data (dados da tabela) * Table cell (células da tabela)
+    th -> table header (cabeçalho da tabela)
+    -->
+
+    <table>
+        <tr>
+            <th>Produto</th> 
+            <th>quantidade</th>
+            <th>preço</th>
+        </tr>
+
+        <tr>
+            <td>notebook</td>
+            <td>1</td>
+            <td>R$ 1.000</td>
+        </tr>
+
+        <tr>
+            <td>tablet</td>
+            <td>1</td>
+            <td>R$ 1.140</td>
+        </tr>
+
+        <!--
+        colspan -> extensão da coluna
+        rowspan -> extensão da linha
+        -->
+
+        <tr>
+            <td rowspan="2">desconto</td>
+            <td colspan="2">Cupom 1 - R$ 20</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Cupom 2 - R$ 20</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
