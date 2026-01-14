@@ -1,0 +1,1 @@
+secao 10 foi anotada toda no meu caderno!!!
