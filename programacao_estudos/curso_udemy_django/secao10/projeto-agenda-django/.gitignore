@@ -1,0 +1,33 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Django ---
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# --- Pastas de Mídia e Estáticos Coletados ---
+# A pasta onde ficam os uploads de usuários (se houver)
+media/
+# A pasta gerada pelo comando collectstatic (não a sua base_static)
+staticfiles/
+
+# --- Ambiente Virtual ---
+# O nome da sua pasta é 'venv', como visto na imagem
+venv/
+.venv/
+env/
+
+# --- Variáveis de Ambiente ---
+.env
+
+# --- IDE / Editores ---
+.vscode/
+.idea/
+
+# --- Sistema Operacional ---
+Thumbs.db
+.DS_Store
