@@ -8,6 +8,8 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+static/
+media/
 
 # --- Pastas de Mídia e Estáticos Coletados ---
 # A pasta onde ficam os uploads de usuários (se houver)
