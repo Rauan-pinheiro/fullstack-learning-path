@@ -314,7 +314,10 @@ svg {
 }
 
 #button-index{
+  color: white;
+  background-color: var(--link-dark-color);
   text-decoration: none;
-  border: solid blue;
+  border: solid var(--link-dark-color);
   border-radius: 1em;
+  padding: 4px;
 }
