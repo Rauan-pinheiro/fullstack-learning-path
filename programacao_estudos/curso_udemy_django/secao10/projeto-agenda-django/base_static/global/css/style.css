@@ -312,3 +312,9 @@ svg {
   filter: brightness(80%);
   box-shadow: 0 0 5px var(--link-dark-color);
 }
+
+#button-index{
+  text-decoration: none;
+  border: solid blue;
+  border-radius: 1em;
+}

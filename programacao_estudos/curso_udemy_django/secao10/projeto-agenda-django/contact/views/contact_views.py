@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+
 from contact.models import Contact
 
 # Create your views here.
@@ -14,3 +16,17 @@ def index(request):
         'contact/index.html', context
     )
     
+    
+def contact(request, contact_id):
+    single_contacts = get_object_or_404(
+        Contact.objects.filter(pk=contact_id, show=True)
+    )
+    
+    context = {
+        'contact': single_contacts, 
+    }
+    
+    return render(
+        request,
+        'contact/contact.html', context
+    )
