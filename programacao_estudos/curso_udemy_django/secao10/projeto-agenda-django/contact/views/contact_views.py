@@ -28,8 +28,8 @@ def search(request):
         .filter(
             Q(first_name__icontains=search_value) | 
             Q(last_name__icontains=search_value) |
-            Q(phone_name__icontains=search_value) |
-            Q(email_name__icontains=search_value)  
+            Q(phone__icontains=search_value) |
+            Q(email__icontains=search_value)  
         )\
         .order_by('-id')
 
