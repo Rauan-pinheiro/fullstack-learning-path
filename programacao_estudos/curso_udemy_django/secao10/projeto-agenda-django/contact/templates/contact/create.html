@@ -25,6 +25,10 @@
                         
                         {{field.errors}}
 
+                        {% if field.hep_text %}
+                            <p class="help_text">{{ field.hep_text }}</p>
+                        {% endif %}
+
                     </div>
                 {% endfor %}
             </div>
