@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from . import models
 
 class ContactForm(forms.ModelForm):
@@ -58,4 +59,33 @@ class ContactForm(forms.ModelForm):
         return first_name
     
 class RegisterForm(UserCreationForm):
-    ...
+    first_name = forms.CharField( # verificação do campo 'primeiro nome', 'required=True' significa que o campo não pode ser vazio
+        required=True,
+        min_length=3, # mínimo de caracteres
+    )
+    
+    last_name = forms.CharField(
+        required=True,
+        min_length=3,
+    )
+    
+    email = forms.EmailField()
+    
+    class Meta: # Define os campos do formulário
+        model = User
+        
+        fields = (
+            'first_name', 'last_name', 'email', 'username', 'password1', 'password2',
+        )
+        
+    # está função faz a validação se um email já existir no cadastro de algum usuário(email em uso)
+    def clean_email(self): 
+        email = self.cleaned_data.get('email')
+        
+        if User.objects.filter(email=email).exists():
+            self.add_error(
+                'email', # campo 'email'
+                ValidationError('Já existe este e-mail', code='invalid') # mensagem de erro
+            )
+            
+        return email
