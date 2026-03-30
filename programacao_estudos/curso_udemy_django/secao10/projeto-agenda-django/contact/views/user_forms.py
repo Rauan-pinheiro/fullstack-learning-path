@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import auth
 
-from contact.forms import RegisterForm
+from contact.forms import RegisterForm, RegisterUpdateForm
 
 def register(request):
     form = RegisterForm()
@@ -24,7 +24,44 @@ def register(request):
             'form': form
         }
     )
+
+def logout_view(request):
+    auth.logout(request)
+
+    return redirect('contact:login')
+
+def user_update(request):
+    form = RegisterUpdateForm(instance=request.user)
     
+    if request != 'POST':
+        return render(
+            request,
+            'contact/register.html',
+            {
+                'form': form
+            }
+        )
+        
+    form = RegisterUpdateForm(data=request.PSOT, instance=request.user)
+    
+    if not form.is_valid():
+        return render(
+            request,
+            'contact/register.html',
+            {
+                'form': form
+            }
+        )
+        
+    form.save()
+    return render(
+        request,
+        'contact/register.html',
+        {
+            'form': form
+        }
+    )
+
 def login_view(request):
     form = AuthenticationForm(request)
     
@@ -47,8 +84,4 @@ def login_view(request):
             'form': form
         }
     )
-    
-def logout_view(request):
-    auth.logout(request)
 
-    return redirect('contact:login')
