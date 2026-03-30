@@ -12,10 +12,10 @@ class ContactForm(forms.ModelForm):
             attrs={
                 'aceppt': 'iamge/*',
             }
-        )
+        ),
+        required=False
     )
         
-    
     class Meta:
         model = models.Contact
         fields = (
