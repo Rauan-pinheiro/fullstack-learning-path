@@ -7,15 +7,14 @@ from . import models
 
 class ContactForm(forms.ModelForm):
     
-    # ESSE TRECHO DE CÓDIGO DEIXA O CAMPO PICTURE OPCIONAL, PODENDO DEIXAR SEM FOTO
-    # picture = forms.ImageField(
-    #     widget=forms.FileInput(
-    #         attrs={
-    #             'aceppt': 'iamge/*',
-    #         }
-    #     ),
-    #     required=False
-    # )
+    picture = forms.ImageField(
+        widget=forms.FileInput(
+            attrs={
+                'aceppt': 'iamge/*',
+            }
+        ),
+        required=False
+    )
 
     class Meta:
         model = models.Contact
