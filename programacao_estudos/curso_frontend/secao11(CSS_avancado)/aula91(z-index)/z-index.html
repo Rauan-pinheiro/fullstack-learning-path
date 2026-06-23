@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobrepondo Elementos com z-index</title>
+
+    <style>
+
+        .caixa1{
+            border: 1px solid blue;
+            background-color: lightblue;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 0;
+        }
+
+        .caixa2{
+            border: 1px solid red;
+            background-color: lightcoral;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            z-index: 0;
+        }
+
+        .caixa3{
+            border: 1px solid green;
+            background-color: lightgreen;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 160px;
+            left: 160px;
+            z-index: -1;
+        }
+
+
+        /* exercício */
+        .caixa{
+            position: relative;
+            background-color: purple;
+            width: 700px;
+        }
+
+        .destaque{
+            position: absolute;
+            bottom: 2.5em;
+            left: 2em;
+            background-color: orange;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 30px;
+        }
+
+        .promocao{
+            background-color: white;
+            border: 2px dotted purple;
+            color: purple;
+            position: absolute;
+            bottom: -1.8em;
+            padding: 1em;
+            left: 10%;
+            right: 10%;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <!-- exercício -->
+    <h1>Exercício</h1>
+
+    <div class="caixa">
+
+        <img src="../../secao8(propiedadesCSS)/aula43/img/banner.png" alt="img desconto" width="700">
+
+        <div class="destaque">
+            Tempo limitado
+        </div>
+
+        <div class="promocao">
+            Quero a promoção
+        </div>
+
+    </div>
+
+    <!-- aula -->
+    <!-- <div class="caixa1">
+        caixa 1
+    </div>
+
+    <div class="caixa2">
+        caixa 2
+    </div>
+
+    <div class="caixa3">
+        caixa 3
+    </div> -->
+
+</body>
+</html>
