@@ -30,5 +30,10 @@ Ferramentas e tecnologias padronizadas que utilizo em minhas máquinas de trabal
 ### 🔗 Referências Úteis
 - [W3Schools](https://www.w3schools.com/) - Referência oficial para tags e sintaxe Web.
 
+## 🤝 Estudando em parceria com o Claude
+
+Nos meus estudos conto com o **Claude**, a IA da Anthropic, como parceiro: uso para tirar dúvidas, revisar exercícios e entender conceitos com mais profundidade. O código e a prática são meus; o Claude é o colega que me ajuda a aprender mais rápido.
+
+
 ---
 *Mantido por Rauan Pinheiro*
